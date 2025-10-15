@@ -72,7 +72,10 @@ const Index = () => {
                     size="lg"
                     className="bg-gradient-to-r from-purple-700 to-violet-600 hover:from-purple-800 hover:to-violet-700 shadow-lg shadow-purple-900/50"
                     onClick={() => setActiveSection('fanfics')}
-                  >Читать фанфик</Button>
+                  >
+                    <Icon name="Book" size={20} className="mr-2" />
+                    Читать фанфик
+                  </Button>
                   <Button size="lg" variant="outline" className="border-purple-700 hover:bg-purple-950" onClick={() => setActiveSection('universes')}>
                     <Icon name="Moon" size={20} className="mr-2" />
                     Открыть порталы
