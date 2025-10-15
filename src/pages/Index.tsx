@@ -87,7 +87,7 @@ const Index = () => {
 
             <section>
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-3xl font-bold text-gray-100">Темные миры</h3>
+                <h3 className="text-3xl font-bold text-gray-100">Фандомы</h3>
                 <Button variant="ghost" onClick={() => setActiveSection('universes')}>
                   Смотреть все
                   <Icon name="ArrowRight" size={16} className="ml-2" />
