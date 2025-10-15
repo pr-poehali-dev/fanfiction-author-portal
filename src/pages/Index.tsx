@@ -10,27 +10,27 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const universes = [
-    { id: 1, name: 'Вселенная магии и тайн', description: 'Мир древних заклинаний и забытых артефактов', stories: 12, color: 'from-purple-600 to-pink-600' },
-    { id: 2, name: 'Киберпанк 2077', description: 'Неоновые улицы и цифровые мечты', stories: 8, color: 'from-blue-600 to-purple-600' },
-    { id: 3, name: 'Эпоха драконов', description: 'Легенды о крылатых хранителях', stories: 15, color: 'from-red-600 to-orange-600' },
+    { id: 1, name: 'Темные хроники', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-purple-900 to-violet-700' },
+    { id: 2, name: 'Тени потустороннего', description: 'Граница между мирами живых и мертвых', stories: 8, color: 'from-slate-900 to-purple-900' },
+    { id: 3, name: 'Кровавая луна', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-purple-950' },
   ];
 
   const fanfics = [
-    { id: 1, title: 'Тени прошлого', universe: 'Вселенная магии и тайн', chapters: 24, views: 15420, likes: 892 },
-    { id: 2, title: 'Неоновый рассвет', universe: 'Киберпанк 2077', chapters: 18, views: 12300, likes: 745 },
-    { id: 3, title: 'Последний драконорожденный', universe: 'Эпоха драконов', chapters: 32, views: 21500, likes: 1234 },
-    { id: 4, title: 'Шепот звезд', universe: 'Вселенная магии и тайн', chapters: 15, views: 9800, likes: 567 },
-    { id: 5, title: 'Цифровое сердце', universe: 'Киберпанк 2077', chapters: 20, views: 13700, likes: 823 },
-    { id: 6, title: 'Крылья судьбы', universe: 'Эпоха драконов', chapters: 28, views: 18900, likes: 1056 },
+    { id: 1, title: 'Тени прошлого', universe: 'Темные хроники', chapters: 24, views: 15420, likes: 892 },
+    { id: 2, title: 'Проклятие кровавой луны', universe: 'Кровавая луна', chapters: 18, views: 12300, likes: 745 },
+    { id: 3, title: 'Хранитель врат', universe: 'Тени потустороннего', chapters: 32, views: 21500, likes: 1234 },
+    { id: 4, title: 'Шепот древних', universe: 'Темные хроники', chapters: 15, views: 9800, likes: 567 },
+    { id: 5, title: 'Ритуал тьмы', universe: 'Кровавая луна', chapters: 20, views: 13700, likes: 823 },
+    { id: 6, title: 'Душа некроманта', universe: 'Тени потустороннего', chapters: 28, views: 18900, likes: 1056 },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50">
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Fanfiction Universe
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-violet-300 bg-clip-text text-transparent">
+              Мистические Хроники
             </h1>
             <div className="hidden md:flex gap-8">
               {['home', 'universes', 'fanfics', 'about', 'contact'].map((section) => (
@@ -38,7 +38,7 @@ const Index = () => {
                   key={section}
                   onClick={() => setActiveSection(section)}
                   className={`text-sm font-medium transition-colors story-link ${
-                    activeSection === section ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'
+                    activeSection === section ? 'text-purple-400' : 'text-gray-400 hover:text-purple-400'
                   }`}
                 >
                   {section === 'home' && 'Главная'}
@@ -61,25 +61,25 @@ const Index = () => {
           <div className="space-y-20 animate-fade-in">
             <section className="text-center py-20">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  Добро пожаловать в мир фанфиков
+                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-300 to-purple-400 bg-clip-text text-transparent">
+                  Врата в миры теней
                 </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Погрузитесь в уникальные истории, рожденные воображением. Здесь каждая вселенная — это новое приключение,
-                  каждый персонаж — живая душа.
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Погрузитесь в мрачные истории, где магия переплетается с тайнами. Здесь каждая вселенная скрывает древние секреты,
+                  каждый персонаж балансирует между светом и тьмой.
                 </p>
                 <div className="flex gap-4 justify-center">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    className="bg-gradient-to-r from-purple-700 to-violet-600 hover:from-purple-800 hover:to-violet-700 shadow-lg shadow-purple-900/50"
                     onClick={() => setActiveSection('fanfics')}
                   >
                     <Icon name="BookOpen" size={20} className="mr-2" />
-                    Читать фанфики
+                    Войти в хроники
                   </Button>
-                  <Button size="lg" variant="outline" onClick={() => setActiveSection('universes')}>
-                    <Icon name="Sparkles" size={20} className="mr-2" />
-                    Исследовать вселенные
+                  <Button size="lg" variant="outline" className="border-purple-700 hover:bg-purple-950" onClick={() => setActiveSection('universes')}>
+                    <Icon name="Moon" size={20} className="mr-2" />
+                    Открыть порталы
                   </Button>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const Index = () => {
 
             <section>
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-3xl font-bold text-gray-800">Популярные вселенные</h3>
+                <h3 className="text-3xl font-bold text-gray-100">Темные миры</h3>
                 <Button variant="ghost" onClick={() => setActiveSection('universes')}>
                   Смотреть все
                   <Icon name="ArrowRight" size={16} className="ml-2" />
@@ -97,9 +97,9 @@ const Index = () => {
                 {universes.map((universe) => (
                   <Card key={universe.id} className="hover-scale cursor-pointer overflow-hidden group">
                     <div className={`h-40 bg-gradient-to-br ${universe.color} relative`}>
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                      <div className="absolute bottom-4 left-4 text-white">
-                        <Icon name="Sparkles" size={24} />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                      <div className="absolute bottom-4 left-4 text-purple-300">
+                        <Icon name="Moon" size={24} />
                       </div>
                     </div>
                     <CardHeader>
@@ -107,7 +107,7 @@ const Index = () => {
                       <CardDescription>{universe.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
                         <Icon name="BookOpen" size={16} />
                         <span>{universe.stories} историй</span>
                       </div>
@@ -119,7 +119,7 @@ const Index = () => {
 
             <section>
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-3xl font-bold text-gray-800">Последние фанфики</h3>
+                <h3 className="text-3xl font-bold text-gray-100">Мрачные сказания</h3>
                 <Button variant="ghost" onClick={() => setActiveSection('fanfics')}>
                   Смотреть все
                   <Icon name="ArrowRight" size={16} className="ml-2" />
@@ -137,11 +137,11 @@ const Index = () => {
                             {fanfic.universe}
                           </CardDescription>
                         </div>
-                        <Icon name="BookMarked" size={24} className="text-purple-600" />
+                        <Icon name="BookMarked" size={24} className="text-purple-400" />
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <div className="flex gap-6 text-sm text-gray-600">
+                      <div className="flex gap-6 text-sm text-gray-400">
                         <div className="flex items-center gap-1">
                           <Icon name="FileText" size={16} />
                           <span>{fanfic.chapters} глав</span>
@@ -166,15 +166,15 @@ const Index = () => {
         {activeSection === 'universes' && (
           <div className="space-y-8 animate-fade-in">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-gray-800">Вселенные</h2>
-              <p className="text-lg text-gray-600">Исследуйте миры, созданные воображением</p>
+              <h2 className="text-4xl font-bold mb-4 text-gray-100">Мрачные вселенные</h2>
+              <p className="text-lg text-gray-300">Откройте порталы в миры, окутанные тайной</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {universes.map((universe) => (
                 <Card key={universe.id} className="hover-scale cursor-pointer overflow-hidden group">
                   <div className={`h-48 bg-gradient-to-br ${universe.color} relative`}>
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                      <Icon name="Sparkles" size={48} className="text-white opacity-80" />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <Icon name="Moon" size={48} className="text-purple-300 opacity-80" />
                     </div>
                   </div>
                   <CardHeader>
@@ -183,7 +183,7 @@ const Index = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
                         <Icon name="BookOpen" size={16} />
                         <span>{universe.stories} историй</span>
                       </div>
@@ -202,8 +202,8 @@ const Index = () => {
         {activeSection === 'fanfics' && (
           <div className="space-y-8 animate-fade-in">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-gray-800">Все фанфики</h2>
-              <p className="text-lg text-gray-600">Коллекция историй из разных вселенных</p>
+              <h2 className="text-4xl font-bold mb-4 text-gray-100">Библиотека теней</h2>
+              <p className="text-lg text-gray-300">Запретные знания и тайные хроники</p>
             </div>
             <Tabs defaultValue="all" className="w-full">
               <TabsList className="grid w-full max-w-md mx-auto grid-cols-4">
@@ -219,7 +219,7 @@ const Index = () => {
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-lg flex-1">{fanfic.title}</CardTitle>
-                          <Icon name="BookMarked" size={20} className="text-purple-600" />
+                          <Icon name="BookMarked" size={20} className="text-purple-400" />
                         </div>
                         <CardDescription className="flex items-center gap-2">
                           <Icon name="Globe" size={14} />
@@ -228,7 +228,7 @@ const Index = () => {
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-3">
-                          <div className="flex gap-4 text-sm text-gray-600">
+                          <div className="flex gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Icon name="FileText" size={16} />
                               <span>{fanfic.chapters}</span>
@@ -258,7 +258,7 @@ const Index = () => {
                       <CardHeader>
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-lg flex-1">{fanfic.title}</CardTitle>
-                          <Icon name="TrendingUp" size={20} className="text-pink-600" />
+                          <Icon name="TrendingUp" size={20} className="text-violet-400" />
                         </div>
                         <CardDescription className="flex items-center gap-2">
                           <Icon name="Globe" size={14} />
@@ -266,9 +266,9 @@ const Index = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <div className="flex gap-4 text-sm text-gray-600">
+                        <div className="flex gap-4 text-sm text-gray-400">
                           <div className="flex items-center gap-1">
-                            <Icon name="Heart" size={16} className="text-pink-600" />
+                            <Icon name="Heart" size={16} className="text-violet-400" />
                             <span>{fanfic.likes.toLocaleString()}</span>
                           </div>
                           <div className="flex items-center gap-1">
@@ -288,13 +288,13 @@ const Index = () => {
         {activeSection === 'about' && (
           <div className="max-w-3xl mx-auto animate-fade-in">
             <Card className="overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-600 flex items-center justify-center">
-                <Icon name="Feather" size={64} className="text-white" />
+              <div className="h-48 bg-gradient-to-br from-purple-900 to-violet-800 flex items-center justify-center">
+                <Icon name="Feather" size={64} className="text-purple-300" />
               </div>
               <CardHeader>
                 <CardTitle className="text-3xl">Об авторе</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6 text-gray-700 leading-relaxed">
+              <CardContent className="space-y-6 text-gray-300 leading-relaxed">
                 <p className="text-lg">
                   Приветствую! Я — автор этих историй, создатель миров и судеб персонажей, живущих на страницах моих фанфиков.
                 </p>
@@ -309,8 +309,8 @@ const Index = () => {
                 <div className="pt-4">
                   <h4 className="font-semibold text-lg mb-3">Интересы:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Фэнтези', 'Научная фантастика', 'Мифология', 'Психология персонажей', 'Мировое строительство'].map((tag) => (
-                      <span key={tag} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                    {['Темное фэнтези', 'Мистика', 'Некромантия', 'Древние проклятия', 'Миры теней'].map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-purple-950 text-purple-300 rounded-full text-sm border border-purple-800">
                         {tag}
                       </span>
                     ))}
@@ -333,29 +333,29 @@ const Index = () => {
               <CardContent>
                 <form className="space-y-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-700">
+                    <label htmlFor="name" className="text-sm font-medium text-gray-300">
                       Ваше имя
                     </label>
                     <Input id="name" placeholder="Введите ваше имя" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                    <label htmlFor="email" className="text-sm font-medium text-gray-300">
                       Email
                     </label>
                     <Input id="email" type="email" placeholder="your@email.com" />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-gray-700">
+                    <label htmlFor="message" className="text-sm font-medium text-gray-300">
                       Сообщение
                     </label>
                     <Textarea id="message" placeholder="Напишите ваше сообщение..." rows={6} />
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+                  <Button className="w-full bg-gradient-to-r from-purple-700 to-violet-600 hover:from-purple-800 hover:to-violet-700 shadow-lg shadow-purple-900/50">
                     <Icon name="Send" size={18} className="mr-2" />
                     Отправить сообщение
                   </Button>
                 </form>
-                <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="mt-8 pt-8 border-t border-purple-900/30">
                   <h4 className="font-semibold mb-4 text-center">Найдите меня в соцсетях</h4>
                   <div className="flex justify-center gap-4">
                     <Button variant="outline" size="icon" className="rounded-full">
@@ -375,15 +375,15 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="bg-white border-t border-purple-100 mt-20">
+      <footer className="bg-slate-950/80 border-t border-purple-900/30 mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600 text-sm">© 2024 Fanfiction Universe. Все права защищены.</p>
-            <div className="flex gap-6 text-sm text-gray-600">
-              <a href="#" className="hover:text-purple-600 transition-colors">
+            <p className="text-gray-400 text-sm">© 2024 Мистические Хроники. Все права защищены.</p>
+            <div className="flex gap-6 text-sm text-gray-400">
+              <a href="#" className="hover:text-purple-400 transition-colors">
                 Политика конфиденциальности
               </a>
-              <a href="#" className="hover:text-purple-600 transition-colors">
+              <a href="#" className="hover:text-purple-400 transition-colors">
                 Правила использования
               </a>
             </div>
