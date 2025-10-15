@@ -10,7 +10,7 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const universes = [
-    { id: 1, name: 'Темные хроники', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-teal-900 to-slate-800' },
+    { id: 1, name: 'Сверхъестественное', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-teal-900 to-slate-800' },
     { id: 2, name: 'Тени потустороннего', description: 'Граница между мирами живых и мертвых', stories: 8, color: 'from-slate-900 to-teal-900' },
     { id: 3, name: 'Кровавая луна', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-slate-950' },
   ];
