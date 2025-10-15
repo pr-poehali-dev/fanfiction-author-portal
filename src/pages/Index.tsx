@@ -10,9 +10,9 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const universes = [
-    { id: 1, name: 'Темные хроники', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-purple-900 to-violet-700' },
-    { id: 2, name: 'Тени потустороннего', description: 'Граница между мирами живых и мертвых', stories: 8, color: 'from-slate-900 to-purple-900' },
-    { id: 3, name: 'Кровавая луна', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-purple-950' },
+    { id: 1, name: 'Темные хроники', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-teal-900 to-slate-800' },
+    { id: 2, name: 'Тени потустороннего', description: 'Граница между мирами живых и мертвых', stories: 8, color: 'from-slate-900 to-teal-900' },
+    { id: 3, name: 'Кровавая луна', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-slate-950' },
   ];
 
   const fanfics = [
@@ -25,16 +25,16 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 relative">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/4df71047-32e0-40c1-81af-f317fe9e66bd.png)' }}
       ></div>
       <div className="relative z-10">
-      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30">
+      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-teal-900/30">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-violet-300 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent">
               Utterlyna's notes
             </h1>
             <div className="hidden md:flex gap-8">
@@ -43,7 +43,7 @@ const Index = () => {
                   key={section}
                   onClick={() => setActiveSection(section)}
                   className={`text-sm font-medium transition-colors story-link ${
-                    activeSection === section ? 'text-purple-400' : 'text-gray-400 hover:text-purple-400'
+                    activeSection === section ? 'text-amber-400' : 'text-gray-400 hover:text-amber-400'
                   }`}
                 >
                   {section === 'home' && 'Главная'}
@@ -66,7 +66,7 @@ const Index = () => {
           <div className="space-y-20 animate-fade-in">
             <section className="text-center py-20">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-300 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-clip-text text-transparent">
                   Да не оставит нас Господи
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -75,13 +75,13 @@ const Index = () => {
                 <div className="flex gap-4 justify-center">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-purple-700 to-violet-600 hover:from-purple-800 hover:to-violet-700 shadow-lg shadow-purple-900/50"
+                    className="bg-gradient-to-r from-teal-800 to-teal-700 hover:from-teal-900 hover:to-teal-800 shadow-lg shadow-teal-900/50"
                     onClick={() => setActiveSection('fanfics')}
                   >
                     <Icon name="Book" size={20} className="mr-2" />
                     Читать фанфик
                   </Button>
-                  <Button size="lg" variant="outline" className="border-purple-700 hover:bg-purple-950" onClick={() => setActiveSection('universes')}>
+                  <Button size="lg" variant="outline" className="border-teal-700 hover:bg-teal-950" onClick={() => setActiveSection('universes')}>
                     <Icon name="Sparkles" size={20} className="mr-2" />
                     Другие вселенные
                   </Button>
@@ -102,7 +102,7 @@ const Index = () => {
                   <Card key={universe.id} className="hover-scale cursor-pointer overflow-hidden group">
                     <div className={`h-40 bg-gradient-to-br ${universe.color} relative`}>
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
-                      <div className="absolute bottom-4 left-4 text-purple-300">
+                      <div className="absolute bottom-4 left-4 text-amber-300">
                         <Icon name="Moon" size={24} />
                       </div>
                     </div>
@@ -379,15 +379,15 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="bg-slate-950/80 border-t border-purple-900/30 mt-20">
+      <footer className="bg-slate-950/80 border-t border-teal-900/30 mt-20">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">© 2024 Мистические Хроники. Все права защищены.</p>
             <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-purple-400 transition-colors">
+              <a href="#" className="hover:text-amber-400 transition-colors">
                 Политика конфиденциальности
               </a>
-              <a href="#" className="hover:text-purple-400 transition-colors">
+              <a href="#" className="hover:text-amber-400 transition-colors">
                 Правила использования
               </a>
             </div>
