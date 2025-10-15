@@ -25,7 +25,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/4df71047-32e0-40c1-81af-f317fe9e66bd.png)' }}
+      ></div>
+      <div className="relative z-10">
       <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-900/30">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -389,6 +394,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
