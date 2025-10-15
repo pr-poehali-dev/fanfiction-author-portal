@@ -125,7 +125,7 @@ const Index = () => {
 
             <section>
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-3xl font-bold text-gray-100">Мрачные сказания</h3>
+                <h3 className="text-3xl font-bold text-gray-100">Все работы</h3>
                 <Button variant="ghost" onClick={() => setActiveSection('fanfics')}>
                   Смотреть все
                   <Icon name="ArrowRight" size={16} className="ml-2" />
