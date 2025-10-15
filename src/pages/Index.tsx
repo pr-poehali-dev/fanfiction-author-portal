@@ -208,7 +208,7 @@ const Index = () => {
         {activeSection === 'fanfics' && (
           <div className="space-y-8 animate-fade-in">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-gray-100">Библиотека теней</h2>
+              <h2 className="text-4xl font-bold mb-4 text-gray-100">Библиотека</h2>
               <p className="text-lg text-gray-300">Запретные знания и тайные хроники</p>
             </div>
             <Tabs defaultValue="all" className="w-full">
