@@ -30,7 +30,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-violet-300 bg-clip-text text-transparent">
-              Мистические Хроники
+              Utterlyna's notes
             </h1>
             <div className="hidden md:flex gap-8">
               {['home', 'universes', 'fanfics', 'about', 'contact'].map((section) => (
