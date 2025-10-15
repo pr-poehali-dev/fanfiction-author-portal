@@ -76,7 +76,10 @@ const Index = () => {
                     <Icon name="Book" size={20} className="mr-2" />
                     Читать фанфик
                   </Button>
-                  <Button size="lg" variant="outline" className="border-purple-700 hover:bg-purple-950" onClick={() => setActiveSection('universes')}>Другие вселенные</Button>
+                  <Button size="lg" variant="outline" className="border-purple-700 hover:bg-purple-950" onClick={() => setActiveSection('universes')}>
+                    <Icon name="Sparkles" size={20} className="mr-2" />
+                    Другие вселенные
+                  </Button>
                 </div>
               </div>
             </section>
