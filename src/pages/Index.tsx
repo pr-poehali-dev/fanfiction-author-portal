@@ -25,11 +25,13 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-teal-950 to-slate-900 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: 'url(https://cdn.poehali.dev/files/4df71047-32e0-40c1-81af-f317fe9e66bd.png)' }}
       ></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-teal-950/60 via-transparent to-slate-950/40"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]"></div>
       <div className="relative z-10">
       <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-teal-900/30">
         <div className="container mx-auto px-4 py-4">
