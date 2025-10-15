@@ -12,7 +12,7 @@ const Index = () => {
   const universes = [
     { id: 1, name: 'Сверхъестественное', description: 'Мир древних проклятий и забытых заклинаний', stories: 12, color: 'from-teal-900 to-slate-800' },
     { id: 2, name: 'Ориджиналы', description: 'Оригинальные произведения', stories: 8, color: 'from-slate-900 to-teal-900' },
-    { id: 3, name: 'Кровавая луна', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-slate-950' },
+    { id: 3, name: 'Иные миры', description: 'Ночь, когда пробуждаются древние силы', stories: 15, color: 'from-red-950 to-slate-950' },
   ];
 
   const fanfics = [
