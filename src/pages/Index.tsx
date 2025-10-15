@@ -209,7 +209,7 @@ const Index = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4 text-gray-100">Библиотека</h2>
-              <p className="text-lg text-gray-300">Запретные знания и тайные хроники</p>
+              <p className="text-lg text-gray-300">Приятного чтения!</p>
             </div>
             <Tabs defaultValue="all" className="w-full">
               <TabsList className="grid w-full max-w-md mx-auto grid-cols-4">
